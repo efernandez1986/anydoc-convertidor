@@ -1,0 +1,47 @@
+{
+  "name": "anydoc-convertidor",
+  "version": "1.0.0",
+  "description": "Convierte documentos de oficina (Word, PowerPoint, Excel, PDF, etc.) a Markdown y JSON",
+  "main": "main.js",
+  "type": "commonjs",
+  "author": "anydoc Convertidor",
+  "license": "MIT",
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder --win nsis",
+    "dist:dir": "electron-builder --win dir"
+  },
+  "dependencies": {
+    "@firecrawl/anydoc": "latest"
+  },
+  "devDependencies": {
+    "electron": "latest",
+    "electron-builder": "latest"
+  },
+  "build": {
+    "appId": "com.anydoc.convertidor",
+    "productName": "anydoc Convertidor",
+    "npmRebuild": false,
+    "files": [
+      "main.js",
+      "preload.js",
+      "renderer/**/*"
+    ],
+    "asarUnpack": [
+      "node_modules/@firecrawl/**/*"
+    ],
+    "directories": {
+      "output": "dist"
+    },
+    "win": {
+      "target": [
+        "nsis"
+      ]
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "artifactName": "anydoc-convertidor-setup-${version}.${ext}"
+    }
+  }
+}
