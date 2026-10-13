@@ -4,6 +4,8 @@ Aplicación de escritorio (Electron) para convertir documentos de oficina a **Ma
 
 Convierte: Word (`.doc`, `.docx`, `.docm`), PowerPoint (`.ppt`, `.pptx`, …), Excel (`.xls`, `.xlsx`, …), OpenDocument (`.odt`, `.ods`, `.odp`), RTF, EPUB, CSV y PDF.
 
+> **¿Vas a usarlo, no a programarlo?** Lee la [Guía de uso para el equipo](GUIA-EQUIPO.md).
+
 ## Qué hace
 
 - Carga un documento con el botón o arrastrándolo y soltándolo.
